@@ -4,7 +4,7 @@
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=3FCF8E&center=true&vCenter=true&multiline=true&repeat=true&width=780&lines=staff+data+platform+engineer;lakehouse+%7C+streaming+%7C+ml+infrastructure;9%2B+years+%40+marketplace+%2B+travel+scale" alt="typing intro"/>
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=3FCF8E&center=true&vCenter=true&multiline=true&repeat=true&width=820&lines=staff+data+%2B+ml+platform+engineer;lakehouse+%7C+streaming+%7C+mlops+%7C+feature+stores;inference+%7C+RAG+%7C+AI+platform+at+scale" alt="typing intro"/>
 
 <br/>
 
@@ -25,15 +25,16 @@ Hrishikesh Sarma — Staff Data Platform / Software Engineer
 Round Rock, TX · Remote-friendly
 
 hrishisarma@github ~ % cat about.txt
-Staff engineer building lakehouse, streaming, and ML infrastructure at marketplace scale.
-GOAT · Expedia · Comcast — Iceberg on S3, Kafka/Flink, Airflow tier-1 pipelines, data quality at 50+ flows.
+Staff engineer for lakehouse, streaming, and ML platform at marketplace scale.
+Data planes (Iceberg, Kafka, Flink, Airflow) plus MLOps, feature stores, online inference,
+and RAG-style retrieval for discovery, ranking, and internal AI tooling.
 
 hrishisarma@github ~ % ./skills --list
 ```
 
 <div align="center">
 
-[![stack](https://skillicons.dev/icons?i=python,java,go,sql,aws,kafka,spark,airflow,docker,linux,fastapi,postgres&perline=12&theme=dark)](https://skillicons.dev)
+[![stack](https://skillicons.dev/icons?i=python,pytorch,tensorflow,java,go,aws,kafka,spark,airflow,docker,kubernetes,fastapi,postgres,redis&perline=14&theme=dark)](https://skillicons.dev)
 
 </div>
 
@@ -54,6 +55,8 @@ hrishisarma@github ~ % man experience
 + Kafka + Flink — 10K+ events/min, p99 &lt; 2s real-time KPIs
 + Airflow tier-1 — 99.9%+ through BFCM, snapshot recovery
 + Quality + observability — incident detect &lt; 30 min
++ MLOps + feature store — offline/online features, drift + freshness gates
++ Inference paths for ranking/personalization — no stale features in prod
 ```
 
 </td>
@@ -65,7 +68,7 @@ hrishisarma@github ~ % man experience
 ```diff
 + Data / ML discovery platform — 40% faster asset discovery
 + Kafka Streams — sub-15-min freshness (hours → minutes)
-+ Metadata, lineage, search at org scale
++ Metadata, lineage, search — foundation for ML + RAG-style discovery
 ```
 
 **Comcast** · Software Engineer  
@@ -84,7 +87,36 @@ hrishisarma@github ~ % npm run highlights
 | `lakehouse` | Spark → Iceberg, Snowflake marts, compaction + time travel |
 | `streaming` | Event-time windows, checkpoints, ops dashboards live during peak |
 | `platform` | Shared ingestion standards · 4 partner teams · 20+ stakeholders |
-| `ml_ops` | Feature store patterns · drift / freshness gates before prod |
+| `mlops` | Training pipelines, model registry patterns, deploy gates on drift |
+| `feature_store` | Product / seller / buyer signals — offline training, online serving |
+| `inference` | Low-latency serving APIs · feature freshness SLAs · FastAPI surfaces |
+| `ai_rag` | Vector retrieval + catalog/lineage — search &amp; grounding for ML/LLM tools |
+
+```bash
+hrishisarma@github ~ % cat architecture/ml-platform.mmd
+```
+
+```mermaid
+flowchart LR
+  subgraph ingest["Data plane"]
+    K[Kafka / Flink]
+    I[Iceberg lakehouse]
+  end
+  subgraph ml["ML platform"]
+    F[Feature store\noffline + online]
+    T[Training / batch features]
+    M[Model inference]
+  end
+  subgraph ai["AI / RAG"]
+    V[Embeddings / vector index]
+    R[RAG retrieval]
+    A[Apps · Slack · APIs]
+  end
+  K --> I --> F
+  F --> T --> M
+  I --> V --> R --> A
+  M --> A
+```
 
 ```bash
 hrishisarma@github ~ % git log --oneline --stat
