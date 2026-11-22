@@ -11,6 +11,7 @@
 [![profile views](https://komarev.com/ghpvc/?username=hrishisarma&label=profile+views&color=0d1117&style=for-the-badge)](https://github.com/hrishisarma)
 [![hireable](https://img.shields.io/badge/hireable-yes-3FCF8E?style=for-the-badge&logo=github&logoColor=0d1117)](https://github.com/hrishisarma)
 [![company](https://img.shields.io/badge/GOAT_Group-staff_engineer-1f6feb?style=for-the-badge)](https://github.com/goatapp)
+[![resume site](https://img.shields.io/badge/résumé-hrishisarma.github.io-0d1117?style=for-the-badge&logo=googlechrome&logoColor=3FCF8E)](https://hrishisarma.github.io)
 
 </div>
 
@@ -109,6 +110,8 @@ _Public repos will show here once you pin or push more work — try `gh repo lis
 <!--END_SECTION:repos-->
 
 ```bash
+hrishisarma@github ~ % open https://hrishisarma.github.io    # terminal résumé (Resume-dp.pdf)
+
 hrishisarma@github ~ % ./connect.sh
 ```
 
