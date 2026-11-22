@@ -39,6 +39,21 @@ hrishisarma@github ~ % ./skills --list
 </div>
 
 ```bash
+hrishisarma@github ~ % cat ~/skills.txt
+```
+
+| area | stack |
+| :--- | :--- |
+| **Data platform** | Iceberg, Spark, Flink, Kafka, Airflow, Databricks, Delta Lake, Pinot, ETL/ELT, Informatica |
+| **Streaming** | Flink, Kafka Streams, Spark Streaming, Materialize |
+| **Lakehouse / SQL** | S3, Snowflake, Redshift, Postgres, Hive, Parquet, Advanced SQL, Data Modeling |
+| **APIs / services** | FastAPI, Flask, Node.js, REST, Elasticsearch |
+| **Cloud / ops** | AWS, Cloud Data Platforms, Kubernetes, Docker, Jenkins, Datadog, Splunk |
+| **MLOps / feature stores** | Feature stores (offline + online), model registry, training/serving pipelines, drift + freshness SLOs, MLflow-style tracking |
+| **AI / inference / RAG** | Real-time + batch inference, embeddings, vector search, RAG retrieval, PyTorch, LLM orchestration, model observability |
+| **Languages** | Python, SQL, Java, Go, Shell |
+
+```bash
 hrishisarma@github ~ % man experience
 ```
 
